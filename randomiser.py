@@ -2,7 +2,9 @@
 
 import csv
 import secrets
+import webbrowser
 
+pokemon_entry = ''
 national_pokedex = []
 national_pokedex_url = "https://pokemondb.net/pokedex/"
 
@@ -18,7 +20,11 @@ with open('pokemon.csv', 'r', encoding='utf-8') as csv_file:
 
         national_pokedex.append(pokemon_entry)
 
+# TODO: create a second array that helps avoiding repetition
 print("Who's that Pokemon!?")
-print(secrets.choice(national_pokedex))
 
-# TODO: create a second array that holds helps avoid repetition
+pokemon_entry = secrets.choice(national_pokedex)
+
+webbrowser.open_new_tab(pokemon_entry.split(' | ')[2])
+
+print(pokemon_entry)
