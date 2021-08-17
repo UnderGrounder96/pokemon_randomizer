@@ -9,6 +9,7 @@ import webbrowser
 pokemon_entry = ''
 national_pokedex = []
 
+# TODO: Add getopt
 
 def preflight_check():
     """This function creates our pokemon 'database' if it doesn't exist"""
@@ -18,7 +19,7 @@ def preflight_check():
 
     import requests
 
-    pokemon_csv_url = "https://gist.githubusercontent.com/simsketch/1a029a8d7fca1e4c142cbfd043a68f19/raw/bd584ee6c307cc9fab5ba38916e98a85de9c2ba7/pokemon.csv"
+    pokemon_csv_url = "https://gist.githubusercontent.com/UnderGrounder96/13c124888551401c88b8625f3924ebdb/raw/f91faec7cb2fd08b3c28debf917a576c225d8174/pokemon.csv"
     requests_get = requests.get(pokemon_csv_url)
 
     with open("pokemon.csv", "wb") as pokemon_csv_file:
