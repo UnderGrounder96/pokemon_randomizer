@@ -3,13 +3,20 @@
 import os
 import sys
 import csv
+import argparse
 import secrets
 import webbrowser
 
+# argparse
+description = "This program prints a random Pokemon!"
+
+parser = argparse.ArgumentParser(description=description)
+parser.parse_args()
+
+
+# SC: Source Code
 pokemon_entry = ''
 national_pokedex = []
-
-# TODO: Add getopt
 
 def preflight_check():
     """This function creates our pokemon 'database' if it doesn't exist"""
@@ -78,6 +85,7 @@ def select_pokemon():
 
 
 def main():
+    """This function calls all other functions"""
 
     preflight_check()
 
