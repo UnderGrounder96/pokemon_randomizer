@@ -7,6 +7,8 @@ import argparse
 import secrets
 import webbrowser
 
+from time import sleep
+
 # argparse
 description = "This program prints a random Pokemon!"
 
@@ -79,8 +81,11 @@ def select_pokemon():
             pokemon_csv.truncate() # Resizes the file to a specified size
 
     print("Who's that Pokemon!?")
+
+    sleep(2.7)
     print(pokemon_entry)
 
+    sleep(1.6)
     webbrowser.open_new_tab(pokemon_entry.split(' | ')[2])
 
 
